@@ -3,12 +3,13 @@ $headerheight: 275px;
 $Main-Color: lighten(#2d2d2d, 5%);
 $Secondary-Color: lighten(#e0e0e0, 2%);
 $base-font-size: 1em;
+$padding-base: 5px;
 
 @mixin base-font($font-size: $base-font-size) {
   font-size: $font-size;
   font-family: Arial, sans-serif;
   color: $Main-Color;
-  padding: 5px;
+  padding: $padding-base;
 }
 
 %Content-Default {
@@ -89,14 +90,14 @@ main {
     @extend %Content-Default;
     width: 30%;
     background-color: lighten($Secondary-Color, 10%);
-    padding: 30px;
+    padding: $padding-base * 6;
     ul {
       align-items: center;
       li {
         display: flex;
         align-items: center;
         i {
-          padding: 10px;
+          padding: $padding-base * 2;
         }
         a {
           color: $Main-Color;
@@ -108,7 +109,7 @@ main {
     @extend %Content-Default;
     flex-grow: 2;
     background-color: lighten($Main-Color, 70%);
-    padding: 30px;
+    padding: $padding-base * 6;
     padding-left: 70px;
     ul {
       list-style-type: circle;
@@ -117,12 +118,12 @@ main {
       font-weight: 600;
     }
     h2 {
-      padding: 15px;
+      padding: $padding-base * 3;
       padding-left: 0px;
-      padding-top: 20px;
+      padding-top: $padding-base * 4;
     }
     h3 {
-      padding: 12px;
+      padding: $padding-base * 2 + 2;
       padding-top: 0px;
     }
   }
